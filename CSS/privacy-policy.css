@@ -1,0 +1,97 @@
+:root {
+    --light-clr: #E7F0F6;
+    --primary-light: #4A6572;
+    --primary-medium: #344955;
+    --primary-dark: #232F34;
+    --secondary-light: #598dc2;
+    --secondary-dark: #44719e;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F9FAFD;
+}
+ul {
+    list-style: square;
+}
+header {
+    position: fixed;
+    width: 100%;
+}
+header a {
+    color: inherit;
+}
+header button {
+    margin-bottom: 20px;
+    padding: .2rem .4rem;
+    border: none;
+    outline: none;
+    background-color: var(--secondary-light);
+    color: white;
+    cursor: pointer;
+    border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+    transition: background-color .1s;
+    -webkit-transition: background-color .1s;
+    -moz-transition: background-color .1s;
+    -ms-transition: background-color .1s;
+    -o-transition: background-color .1s;
+}
+header button:is(:hover, :focus, .active) {
+    background-color: var(--secondary-dark);
+}
+section {
+    max-width: 650px;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    margin-inline: auto;
+}
+@media(max-width: 690px) {
+    section{
+        padding: 0 20px;
+    }
+}
+@media(max-width: 767px) {
+    section {
+        padding-top: 340px
+    }
+}
+section h1 {
+    color: var(--secondary-light);
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+section p {
+    margin-block: 20px;
+}
+section span {
+    color: var(--secondary-light);
+}
+section ul {
+    margin-left: 20px;
+    color: var(--secondary-light);
+}
+section p:first-of-type {
+    font-weight: bolder;
+}
+section p:last-of-type > a {
+    text-decoration: none;
+    color: var(--secondary-light);
+    transition:  text-decoration, color, .1s;
+    -webkit-transition:  text-decoration, color, .1s;
+    -moz-transition:  text-decoration, color, .1s;
+    -ms-transition:  text-decoration, color, .1s;
+    -o-transition:  text-decoration, color, .1s;
+}
+section p:last-of-type > a:hover {
+    text-decoration: underline;
+    color: var(--secondary-dark);
+}
